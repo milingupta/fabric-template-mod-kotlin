@@ -1,0 +1,50 @@
+{
+	"schemaVersion": 1,
+	"id": "templatemod",
+	"version": "${version}",
+	"name": "Template Mod",
+	"description": "This is a template mod.",
+	"authors": [
+		"milingupta"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/templatemod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "net.milingupta.templatemod.TemplateMod",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "net.milingupta.templatemod.TemplateModClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "net.milingupta.templatemod.TemplateModDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"templatemod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.20"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
